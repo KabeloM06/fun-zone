@@ -45,10 +45,24 @@
 
         &-pane{
             position: absolute;
-            top: 30%;
-            left: 5%;
+            width: 40%;
+            top: 5rem;
+            left: 5rem;
 
+            .name {
+                font-size: 3rem;
+            }
 
+            .meta {
+                font-size: 1.5rem;
+                color: #999;
+                
+            }
+
+            .description {
+                font-size: 1.2rem;
+                line-height: 1.5;
+            }
         }
     }
 }
