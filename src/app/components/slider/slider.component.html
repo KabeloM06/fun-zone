@@ -1,26 +1,26 @@
 {{items | json}}
 
 <div class="slider">
-    <div class="slide">
+    <div class="slide" *ngFor="let item of items">
         <div class="slide-bg">
-            <img src="https://image.tmdb.org/t/p/w500/kqjL17yufvn90VLyXYpvtyrFfak.jpg" alt="">
+            <img [src]="'https://image.tmdb.org/t/p/original/'+ item.backdrop_path" alt="">
         </div>
         <div>
             <div class="slide-pane">
-                <h2 class="movie-name mb-4">The Addams Family</h2>
+                <h2 class="movie-name mb-4">{{item.title}}</h2>
                 <div class="meta">
                     <div class="info">
                         <span class="rating">
                             <span class="bi bi-star-fill text-warning stars"></span>
                             
-                            <span class="rating-value">| 7.6 | </span>
-                            <span> 480 Reviews |</span>
-                            <span>2021</span>
+                            <span class="rating-value">| {{item.vote_average}} | </span>
+                            <span> {{item.vote_count}} Reviews |</span>
+                            <span>{{item.release_date | date: 'yyyy'}}</span>
                         </span>
                     </div>
                 </div>
                 <div class="description mt-3">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci ut iste sapiente laudantium vitae magni eaque eum reprehenderit eveniet hic.
+                    {{item.overview}}
                 </div>
             </div>
         </div>
