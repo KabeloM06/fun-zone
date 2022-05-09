@@ -1,7 +1,7 @@
 <pre class="text-white">{{items | json}}</pre>
 
 <div class="slider">
-    <div class="slide" *ngFor="let item of items">
+    <div class="slide" *ngFor="let item of items" @fade>
         <div class="slide-bg">
             <img class="slide-bg-image" [src]="'https://image.tmdb.org/t/p/original/'+ item.backdrop_path" alt="">
         </div>
