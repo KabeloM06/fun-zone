@@ -1,31 +1,32 @@
-<pre class="text-white">{{items | json}}</pre>
-
 <div class="slider">
-    <div class="slide" *ngFor="let item of items" @fade>
-        <div class="slide-bg">
-            <img class="slide-bg-image" [src]="'https://image.tmdb.org/t/p/original/'+ item.backdrop_path" alt="">
-        </div>
-        <div>
-            <div class="slide-pane">
-                <h2 class="movie-name mb-4">{{item.title}}</h2>
-                <h2 class="movie-name mb-4">{{item.name}}</h2>
+    <ng-container *ngFor="let item of items; let i = index">
+        <div class="slide" *ngIf ="i == currentSlideIndex" @fade>
+            <div class="slide-bg">
+                <img class="slide-bg-image" [src]="'https://image.tmdb.org/t/p/original/'+ item.backdrop_path" alt="">
+            </div>
+            <div>
+                <div class="slide-pane">
+                    <h2 class="movie-name mb-4">{{item.title}} - {{i}}</h2>
+                    <h2 class="movie-name mb-4">{{item.name}} - {{i}}</h2>
                 
-                <div class="meta">
-                    <div class="info">
-                        <span class="rating">
-                            <span class="bi bi-star-fill text-warning stars"></span>
+                    <div class="meta">
+                        <div class="info">
+                            <span class="rating">
+                                <span class="bi bi-star-fill text-warning stars"></span>
                             
-                            <span class="rating-value">| {{item.vote_average}} | </span>
-                            <span> {{item.vote_count}} Reviews |</span>
-                            <span>{{item.release_date | date: 'yyyy'}}</span>
-                            <span>{{item.first_air_date | date: 'yyyy'}}</span>
-                        </span>
+                                <span class="rating-value">| {{item.vote_average}} | </span>
+                                <span> {{item.vote_count}} Reviews |</span>
+                                <span>{{item.release_date | date: 'yyyy'}}</span>
+                                <span>{{item.first_air_date | date: 'yyyy'}}</span>
+                            </span>
+                        </div>
+                    
+                    </div>    
+                    <div class="description mt-3">
+                        {{item.overview}}
                     </div>
-                </div>
-                <div class="description mt-3">
-                    {{item.overview}}
                 </div>
             </div>
         </div>
-    </div>
+    </ng-container>
 </div>

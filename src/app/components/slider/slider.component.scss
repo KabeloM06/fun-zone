@@ -9,9 +9,10 @@
     width: 100%;
 
     .slide {
-        position: relative;
+        position: absolute;
         display: flex;
         height: 30rem;
+        width: 100%;
 
         &-bg {
             position: relative;

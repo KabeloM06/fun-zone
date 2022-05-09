@@ -20,9 +20,14 @@ export class SliderComponent implements OnInit {
 
   @Input() items: Movie[] = [];
 
+  currentSlideIndex : number = 0;
+
   constructor() { }
 
   ngOnInit(): void {
+    setInterval(() => {
+      this.currentSlideIndex = ++this.currentSlideIndex % this.items.length;
+    }, 5000)
   }
 
 }
