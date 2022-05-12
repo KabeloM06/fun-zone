@@ -18,3 +18,10 @@ export interface Movie {
     vote_average: number;
     vote_count: number;
 }
+
+export interface MovieDto {
+    page: number;
+    results: Movie[];
+    tottal_results: number;
+    tottal_pages: number;
+}
