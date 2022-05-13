@@ -12,7 +12,7 @@ export class MoviesService {
 
   constructor(private http : HttpClient) {} 
 
-  getMovies(type: string = 'trending', count: number = 10){
+  getMovies(type: string = 'popular', count: number = 10){
     return this.http.get<MovieDto>(
       `${this.baseUrl}/movie/${type}?api_key=${this.apiKey}`
       ).pipe(switchMap(res => {

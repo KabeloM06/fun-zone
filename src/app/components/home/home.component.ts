@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   constructor(private moviesServive: MoviesService) { }
 
   ngOnInit(): void {
-    this.moviesServive.getMovies('trending')
+    this.moviesServive.getMovies('popular')
     .subscribe((movies)=> {
       this.popularMovies = movies;
     } );
