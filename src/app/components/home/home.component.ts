@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
     .subscribe((movies)=> {
       this.upcomingMovies = movies;
     } );
-    this.moviesServive.getMovies('top_rates')
+    this.moviesServive.getMovies('top_rated')
     .subscribe((movies)=> {
       this.topRatedMovies = movies;
     } );
