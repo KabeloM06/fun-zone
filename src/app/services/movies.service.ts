@@ -14,9 +14,16 @@ export class MoviesService {
 
   getMovies(type: string = 'trending', count: number = 10){
     return this.http.get<MovieDto>(
-      `${this.baseUrl}/${type}/all/day?api_key=${this.apiKey}`
+      `${this.baseUrl}/movie/${type}?api_key=${this.apiKey}`
       ).pipe(switchMap(res => {
         return of(res.results.slice(0, count));
+      }));
+  }
+  searchMovies(page:number){
+    return this.http.get<MovieDto>(
+      `${this.baseUrl}/movie/popular?page=${page}&api_key=${this.apiKey}`
+      ).pipe(switchMap(res => {
+        return of(res.results);
       }));
   }
 }
