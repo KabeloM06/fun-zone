@@ -1,1 +1,7 @@
-<p>movies works!</p>
+
+<div class=" px-5 m-2 row text-white">
+    <div class="col" *ngFor="let movie of movies">
+        <app-movie-item [itemData] = "movie"></app-movie-item>
+    </div>
+    
+</div>
