@@ -1,1 +1,6 @@
-<p>series works!</p>
+<div class=" px-5 m-2 row text-white">
+    <div class="col" *ngFor="let series of series">
+        <app-movie-item [itemData] = "series"></app-movie-item>
+    </div>
+    
+</div>
