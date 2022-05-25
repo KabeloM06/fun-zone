@@ -14,9 +14,17 @@ export class SeriesComponent implements OnInit {
   constructor(private seriesService: SeriesService) { }
 
   ngOnInit(): void {
-    this.seriesService.searchSeries(1)
+    this.getPagedSeries(1);
+  }
+
+  getPagedSeries(page: number){
+    this.seriesService.searchSeries(page)
     .subscribe(series => {
       this.series = series;
-    })
+    });
+  }
+
+  paginate(event: any){
+    this.getPagedSeries(event.page + 1)
   }
 }
