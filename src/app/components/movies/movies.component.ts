@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,  } from '@angular/core';
 import { Movie } from 'src/app/models/movies';
 import { MoviesService } from 'src/app/services/movies.service';
 
@@ -14,10 +14,19 @@ export class MoviesComponent implements OnInit {
   constructor(private moviesService: MoviesService) { }
 
   ngOnInit(): void {
-    this.moviesService.searchMovies(1)
+    this.getPagedMovies(1);
+    
+  }
+
+  getPagedMovies(page: number){
+    this.moviesService.searchMovies(page)
     .subscribe(movies => {
       this.movies = movies;
-    })
+    });  
+  }
+
+  paginate(event: any){
+    this.getPagedMovies(event.page + 1)
   }
 
 }

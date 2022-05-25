@@ -3,5 +3,5 @@
     <div class="col" *ngFor="let movie of movies">
         <app-movie-item [itemData] = "movie"></app-movie-item>
     </div>
-    
+    <p-paginator [rows]="20" [totalRecords]="10000" (onPageChange)="paginate($event)"></p-paginator>
 </div>
