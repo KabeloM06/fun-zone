@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
-import { SeriesDto } from '../models/series';
+import { Series, SeriesDto } from '../models/series';
 import { of, switchMap } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -25,5 +26,11 @@ export class SeriesService {
       ).pipe(switchMap(res => {
         return of(res.results);
       }));
+  }
+
+  getMovieDetails(id: string){
+    return this.http.get<Series>(
+      `${this.baseUrl}/tv/${id}?api_key=${this.apiKey}`
+    )
   }
 }
