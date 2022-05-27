@@ -1,1 +1,6 @@
-<pre>{{movie | json}}</pre>
+<app-slider *ngIf="movie" [items]="[movie]" [isBanner] = "true"></app-slider>
+<p-tabView>
+    <p-tabPanel header="Overview">Content</p-tabPanel>
+    <p-tabPanel header="Videos">Content</p-tabPanel>
+    <p-tabPanel header="Pictures">Content</p-tabPanel>
+</p-tabView>

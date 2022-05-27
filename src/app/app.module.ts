@@ -15,6 +15,8 @@ import { ItemsBannerComponent } from './components/items-banner/items-banner.com
 import { MovieItemComponent } from './components/movie-item/movie-item.component'
 
 import {PaginatorModule} from 'primeng/paginator';
+import {TabViewModule} from 'primeng/tabview';
+
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 
 @NgModule({
@@ -35,7 +37,8 @@ import { MovieDetailsComponent } from './components/movie-details/movie-details.
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    PaginatorModule
+    PaginatorModule,
+    TabViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]
