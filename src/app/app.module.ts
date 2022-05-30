@@ -19,6 +19,7 @@ import {TabViewModule} from 'primeng/tabview';
 
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 import { SeriesDetailsComponent } from './components/series-details/series-details.component';
+import { SeriesItemComponent } from './components/series-item/series-item.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { SeriesDetailsComponent } from './components/series-details/series-detai
     ItemsBannerComponent,
     MovieItemComponent,
     MovieDetailsComponent,
-    SeriesDetailsComponent
+    SeriesDetailsComponent,
+    SeriesItemComponent
   ],
   imports: [
     BrowserModule,

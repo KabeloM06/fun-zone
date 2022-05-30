@@ -1,6 +1,6 @@
 <div class=" px-5 m-2 row text-white">
     <div class="col" *ngFor="let series of series">
-        <app-movie-item [itemData] = "series"></app-movie-item>
+        <app-series-item [itemData] = "series"></app-series-item>
     </div>
     <p-paginator [rows]="20" [totalRecords]="10000" (onPageChange)="paginate($event)"></p-paginator>
 </div>
