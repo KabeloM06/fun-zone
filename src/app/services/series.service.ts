@@ -28,7 +28,7 @@ export class SeriesService {
       }));
   }
 
-  getMovieDetails(id: string){
+  getSeriesDetails(id: string){
     return this.http.get<Series>(
       `${this.baseUrl}/tv/${id}?api_key=${this.apiKey}`
     )

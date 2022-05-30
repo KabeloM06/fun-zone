@@ -18,6 +18,7 @@ import {PaginatorModule} from 'primeng/paginator';
 import {TabViewModule} from 'primeng/tabview';
 
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
+import { SeriesDetailsComponent } from './components/series-details/series-details.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { MovieDetailsComponent } from './components/movie-details/movie-details.
     SliderComponent,
     ItemsBannerComponent,
     MovieItemComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    SeriesDetailsComponent
   ],
   imports: [
     BrowserModule,
