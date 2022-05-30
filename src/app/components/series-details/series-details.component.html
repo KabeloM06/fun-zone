@@ -1,1 +1,6 @@
-<p>series-details works!</p>
+<app-slider *ngIf="series" [items]="[series]" [isBanner] = "true"></app-slider>
+<p-tabView>
+    <p-tabPanel header="Overview">Content</p-tabPanel>
+    <p-tabPanel header="Videos">Content</p-tabPanel>
+    <p-tabPanel header="Pictures">Content</p-tabPanel>
+</p-tabView>
