@@ -3,9 +3,9 @@ import { ActivatedRoute } from '@angular/router';
 import { first } from 'rxjs';
 import { IMAGES_SIZES } from 'src/app/constatnts/image-sizes';
 import { Movie, MovieVideo } from 'src/app/models/movies';
-import { Series } from 'src/app/models/series';
+
 import { MoviesService } from 'src/app/services/movies.service';
-import { SeriesService } from 'src/app/services/series.service';
+
 
 @Component({
   selector: 'app-movie-details',

@@ -42,3 +42,7 @@ export interface Genre {
 export interface Companies {
     name: string;
 }
+export interface SeriesVideo {
+    site: string;
+    key: string;
+}

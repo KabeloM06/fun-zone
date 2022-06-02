@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { IMAGES_SIZES } from 'src/app/constatnts/image-sizes';
 import { Movie } from 'src/app/models/movies';
-import { Series } from 'src/app/models/series';
+import { Series, SeriesVideo } from 'src/app/models/series';
 
 import { SeriesService } from 'src/app/services/series.service';
 
@@ -13,6 +14,8 @@ import { SeriesService } from 'src/app/services/series.service';
 export class SeriesDetailsComponent implements OnInit {
 
   series: Series | null = null;
+  imagesSizes = IMAGES_SIZES;
+  seriesVideos: SeriesVideo[]=[];
 
   constructor(
     private route: ActivatedRoute,
