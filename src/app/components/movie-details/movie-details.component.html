@@ -83,9 +83,15 @@
         </div>
     </p-tabPanel>
     <p-tabPanel header="Videos">
-        <ng-container  *ngFor="let movieVideo of movieVideos">
-            <app-video-embeded [key]="movieVideo.key" [site]="movieVideo.site"></app-video-embeded>
-        </ng-container>
+        <div class="row">
+            <ng-container  *ngFor="let movieVideo of movieVideos">
+                <div class="col-12 col-md-6 col-lg-6 py-3 px-5">
+                    <app-video-embeded [key]="movieVideo.key" [site]="movieVideo.site"></app-video-embeded>
+                </div>
+                
+            </ng-container>
+        </div>
+        
         
         
     </p-tabPanel>
