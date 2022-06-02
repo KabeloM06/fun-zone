@@ -84,7 +84,7 @@
     </p-tabPanel>
     <p-tabPanel header="Videos">
         <ng-container  *ngFor="let movieVideo of movieVideos">
-            <app-video-embeded></app-video-embeded>
+            <app-video-embeded [key]="movieVideo.key" [site]="movieVideo.site"></app-video-embeded>
         </ng-container>
         
         
