@@ -11,6 +11,13 @@ export interface Series {
     poster_path: string;
     release_date: string;
     first_air_date: string;
+    revenue: number;
+    runtime: number;
+    status: string;
+    
+    budget: number;
+    genres: Genre[];
+    production_companies: Companies[];
     
     name: string;
     title: string;
@@ -25,4 +32,13 @@ export interface SeriesDto {
     results: Series[];
     tottal_results: number;
     tottal_pages: number;
+}
+
+export interface Genre {
+    id: number;
+    name: string;
+}
+
+export interface Companies {
+    name: string;
 }
